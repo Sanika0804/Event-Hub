@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Event Management</title>
+    <link rel="stylesheet" href="login.css">
+    <script>
+        function toggleLoginForm(type) {
+            if (type === 'customer') {
+                document.getElementById('customer-login').style.display = 'block';
+                document.getElementById('provider-login').style.display = 'none';
+                document.getElementById('toggle-customer').classList.add('active');
+                document.getElementById('toggle-provider').classList.remove('active');
+            } else {
+                document.getElementById('customer-login').style.display = 'none';
+                document.getElementById('provider-login').style.display = 'block';
+                document.getElementById('toggle-provider').classList.add('active');
+                document.getElementById('toggle-customer').classList.remove('active');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <!-- Toggle Buttons for Customer / Service Provider -->
+        <div class="toggle-buttons">
+            <button id="toggle-customer" class="toggle-btn active" onclick="toggleLoginForm('customer')">Customer Login</button>
+            <button id="toggle-provider" class="toggle-btn" onclick="toggleLoginForm('provider')">Service Provider Login</button>
+        </div>
+
+        <!-- Customer Login Form -->
+        <div id="customer-login" class="login-form">
+            <h3>Customer Login</h3>
+            <form action="login.php" method="POST">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <input type="password" name="password" placeholder="Enter your password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="register.html">Register as a customer</a></p>
+        </div>
+
+        <!-- Service Provider Login Form -->
+        <div id="provider-login" class="login-form" style="display: none;">
+            <h3>Service Provider Login</h3>
+            <form action="login.php" method="POST">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <input type="password" name="password" placeholder="Enter your password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="register.html">Register as a service provider</a></p>
+        </div>
+    </div>
+</body>
+</html>

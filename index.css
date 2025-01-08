@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+    --main-color:#d3ad7f ;
+    --black: #13131a;
+    --bg: #010103;
+    --border: .1rem solid rgba(255,255,255,.3); 
+}
+
+*{
+    font-family: "Roboto", sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: .5rem;
+}
+
+body{
+    background: var(--bg);
+}
+
+.header{
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+.header .navbar a{
+    margin: 0.1rem;
+    font-size: 1.6rem;
+    color: #fff;
+    padding:1.2rem;
+}
+
+.header .navbar a:hover{
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+.search-box{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+  }
+  .input-search{
+    height: 50px;
+    width: 50px;
+    border-style: none;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    transition: all .5s ease-in-out;
+    background-color: var(--main-color);
+    padding-right: 40px;
+    color:var(--main-color);
+  }
+  .input-search::placeholder{
+    color:var(--main-color);
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 100;
+  }
+  .btn-search{
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    color:#fff ;
+    background-color:transparent;
+    pointer-events: painted;  
+  }
+  .btn-search:focus ~ .input-search{
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid var(--main-color);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
+  .input-search:focus{
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid var(--main-color);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
+
+  /* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+
+
+/* Dashboard Section */
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+    padding: 90px;
+    margin-top: 90px;
+    gap: 20px;
+}
+
+.dashboard .card p{
+    font-size: 2rem;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.7); /* Matches the Contact Us Section background */
+    color: #d3ad7f; /* Text color from Contact Us Section */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 22%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Similar shadow effect */
+}
+
+.card-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #d3ad7f;
+}
+
+button {
+    padding: 8px 15px;
+    margin-top: 10px;
+    background-color: #d3ad7f;
+    border: none;
+    color: #010103;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #a68256;
+}
+
+input {
+    width: 80%;
+    padding: 8px;
+    margin-top: 10px;
+    font-size: 40px;
+    border: 2px solid #d3ad7f;
+    background-color: #010103;
+    color: #ffffff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #a68256;
+    outline: none;
+}
+
+/* Add Service Section */
+.services, .profile {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 20px;
+}
+
+h2{
+    font-size: 3rem;
+    color: #d3ad7f;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: 500;
+    color: #a68256;
+    font-size: 1.5rem;
+}
+
+input, textarea, button {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    font-size: 1.5rem;
+}
+
+textarea {
+    border: 2px solid #d3ad7f;
+    background-color: #010103;
+    color: #ffffff;
+}
+
+button {
+    background-color: #d3ad7f;
+    border: none;
+    cursor: pointer;
+    color: #010103;
+}
+
+button:hover {
+    background-color: #a68256;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+

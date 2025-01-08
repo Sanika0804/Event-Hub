@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - Customer or Service Provider</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Registration</h2>
+        <form id="registration-form" action="register.php" method="POST">
+            <!-- Common Fields -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <!-- Role Selection -->
+            <label for="role">Select Role:</label>
+            <select id="role" name="role" required onchange="toggleRoleForm()">
+                <option value="customer">Customer</option>
+                <option value="service_provider">Service Provider</option>
+            </select>
+
+            <!-- Customer Specific Fields -->
+            <div id="customer-fields" class="role-fields">
+                <label for="customer-address">Address:</label>
+                <input type="text" id="customer-address" name="customer-address">
+
+                <label for="customer-phone">Phone:</label>
+                <input type="text" id="customer-phone" name="customer-phone">
+            </div>
+
+            <!-- Service Provider Specific Fields -->
+            <div id="service-provider-fields" class="role-fields">
+                <label for="company-name">Company Name:</label>
+                <input type="text" id="company-name" name="company-name">
+
+                <label for="service-type">Type of Service:</label>
+                <input type="text" id="service-type" name="service-type">
+
+                <label for="company-website">Website (Optional):</label>
+                <input type="url" id="company-website" name="company-website">
+
+                <!-- New Service Category Selection -->
+                <label for="service-category">Select Service Category:</label>
+                <select id="service-category" name="service-category">
+                    <option value="event_planner">Event Planner</option>
+                    <option value="venues">Venues</option>
+                    <option value="decor">Decor</option>
+                    <option value="floral_arrangements">Floral Arrangements</option>
+                    <option value="photography_videography">Photography & Videography</option>
+                    <option value="catering">Catering</option>
+                </select>
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+
+    <script src="register.js"></script>
+</body>
+</html>
